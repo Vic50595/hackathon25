@@ -1,96 +1,165 @@
+  /* ------ general ------ */
 
-    * {
+  @import url('https://fonts.googleapis.com/css2?family=Funnel+Display&display=swap');
+
+
+  * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
+  }
 
-    html, body {
+  html,body {
+    font-family: 'Funnel Display', Arial, sans-serif;
       height: 100%;
-      font-family: Arial, sans-serif;
       scroll-behavior: smooth;
       overflow-y: scroll;
-    }
+  }
 
-    /* effet scroll */
-    body {
+  /* effet scroll */
+  body {
       scroll-snap-type: y mandatory;
-    }
+  }
 
-    section {
-      scroll-snap-align: start; 
-    }
+  section {
+      scroll-snap-align: start;
+  }
 
-    /* barre nav */
-    nav {
+  /* ------ barre nav ------ */
+  nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       background: transparent;
       color: rgb(0, 0, 0);
-      padding: 1em 0;
+      padding: 1em;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       gap: 2em;
       transition: transform 0.4s ease, opacity 0.4s ease;
       z-index: 1000;
-    }
+  }
 
-    nav a {
-      color: black;
+  /* Logo (image) */
+  .logo img {
+      height: 40px;
+      /* je pense c est genre dans les 300px */
+      width: auto;
+  }
+
+  /* Nav links */
+  .nav-links {
+      display: flex;
+      gap: 1.5em;
+  }
+
+  .nav-links a {
+      color: #300f21;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
-    }
+  }
 
-    nav a:hover {
-      color: #771800;
-    }
+  .nav-links a:hover {
+      color: #523a47;
+  }
 
 
-
-    /* section fullsreen */
-    .page-section {
+  /* ------ general section ------ */
+  .page-section {
       height: 100vh;
+      /* full viewport */
+      padding-top: 60px;
+      /* space for navbar */
+      box-sizing: border-box;
+      /* include padding in height */
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 3em;
       color: white;
       font-weight: bold;
-    }
+  }
 
-    /* css pour chaque section */
+  /* ------ css pour chaque section------ */
 
-     /* acceuil negoci */
-    .section1 { 
-        background: #c4acb4; }
+  /* acceuil negoci */
+  .section1 {
+      background: #c4acb4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2em;
+  }
 
-     /* etape 1 */
-    .section2 {
-        background: #9daab3; }
 
-    /* etape 2 */
-    .section3 { 
-        background: #726577; }
+  /* etape 1 */
+  .section2 {
+      background: #9daab3;
+  }
 
-    /* etape 3 */
-    .section4 
-    { background: #99918a; }
+  /* etape 2 */
+  .section3 {
+      background: #726577;
+  }
 
-    /* etape 4 */
-    .section5 { 
-        background: #887b7a; }
+  /* etape 3 */
+  .section4 {
+      background: #99918a;
+  }
 
-    /* timing parfait */
-    .section6 
-    { background: #92a399; }
+  /* etape 4 */
+  .section5 {
+      background: #887b7a;
+  }
 
-    /* jour j */
-    .section7 
-    { background: #70757a; }
+  /* timing parfait */
+  .section6 {
+      background: #92a399;
+  }
 
-    /* download p)age */
-    .section8
-     { background: #9b958d; }
+  /* jour j */
+  .section7 {
+      background: #70757a;
+  }
+
+  /* download p)age */
+  .section8 {
+      background: #9b958d;
+  }
+
+  .content-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2em;
+      width: 90%;
+  }
+
+  .text-side {
+      flex: 1;
+      color: white;
+  }
+
+  .text-side h1 {
+
+      color: #000000;
+  }
+
+  .text-side p {}
+
+
+  .image-side {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+  }
+
+  .image-side img {
+      width: 100%;
+      max-width: 550px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+  }
