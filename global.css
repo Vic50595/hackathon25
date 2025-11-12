@@ -36,7 +36,7 @@
     font-weight: 400; /* regular */
   }
   
-  p, a {
+  p, a, li {
     font-size: 16px;
     font-weight: 600; /* semibold */
   }
@@ -78,7 +78,7 @@
     color: var(--dark-green);
   }
 
-  svg {
+  nav svg {
     height: 60px;
     width: 60px;
   }

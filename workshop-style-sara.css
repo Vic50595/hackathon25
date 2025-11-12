@@ -1,0 +1,140 @@
+.section6 {
+    max-width: 1440px;
+
+height: 1024px;
+flex-direction: column;
+gap: 72px;
+
+}
+
+.section6-intro {
+display: flex;
+    flex-direction: column;
+    gap: 68px;
+}
+
+.timeline div {
+display: flex;
+width: 240px;
+height: 349px;
+padding: 20px;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 40px;
+border-radius: 32px;
+background: rgba(204, 204, 204, 0.40);
+
+}
+
+.timeline {
+    display: flex;
+justify-content: center;
+align-items: flex-start;
+align-content: flex-start;
+gap: 20px;
+align-self: stretch;
+flex-wrap: wrap;
+}
+
+.email {
+    display: flex;
+    width: 760px;
+    height: 254px;
+   
+padding: 20px 40px;
+flex-direction: column;
+align-items: center;
+gap: 26px;
+border-radius: 20px;
+border: 1px solid #159FB8;
+}
+
+.email-icon-text {
+    display: flex;
+flex: row;
+gap: 26px;
+flex-shrink: 0;
+align-self: stretch;
+}
+
+.email-icon-text img {
+height: 96px;
+width: 96px;
+}
+
+.eviter {
+    display: flex;
+width: 500px;
+padding: 20px;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+border-radius: 32px;
+background: rgba(219, 82, 96, 0.10);
+
+}
+
+.section6-low {
+    display: flex;
+padding: 0 40px;
+align-items: center;
+justify-items: center;
+gap: 20px;
+align-self: stretch;
+}
+
+.section6 {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 72px;
+}
+
+.section7 > div > div {
+    display: flex;
+    width: 300px;
+    height: 436px;
+    padding: 36px 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 28px;
+    border-radius: 20px;
+    border: 1px solid rgba(250, 172, 107, 0.9);
+  }
+
+.section7 img {
+    width: 74px;
+    height: 74px;
+}
+
+.section7 > div {
+
+display: flex;
+justify-content: center;
+align-items: flex-start;
+gap: 32px; }
+
+ul {
+    padding-left: 8px; /* ajusta según tu diseño */
+    list-style-position: inside; /* hace que el bullet siga el padding del li */
+  }
+
+  .section7 {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.section8 {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+
+    align-items: center;
+    justify-items: center;
+}
+
+
+  
