@@ -37,10 +37,16 @@
     font-weight: 400; /* regular */
   }
   
-  p, a, li {
+  a, li {
     font-size: 16px;
     font-weight: 600; /* semibold */
   }
+
+  p {
+    font-size: 16px;
+    font-weight: 400; /* regular */
+  }
+
 
   section {
     padding: 50px;
