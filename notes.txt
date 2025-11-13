@@ -1,0 +1,20 @@
+     <div class="content-container">
+        <div class="image-side">
+                <img src="images/greysq.jpg" alt="Sample image" />
+            </div>
+            <div class="text-side">
+               <h2>Préparez-vous en 4 étapes</h2>
+<div>
+
+<h3>1. Construisez votre motivation</h3>
+<p>Source : Negocier son salaire 102© The Money Therapy</p>
+
+<p>Avant tout, ancrez votre "pourquoi". Répondez honnêtement :</p>
+<ul>
+  <li>Je veux gagner plus d'argent parce que…</li>
+  <li>Quand j'aurai plus d'argent, je pourrai…</li>
+</ul>
+<p>Ces réponses seront votre carburant quand le doute s'installera.</p>
+            </div>
+            
+        </div>
