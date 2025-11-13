@@ -23,26 +23,25 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Compteur depuis le 20 oct à 9h 
+// Compteur depuis le 20 oct à 9h = Unequal Pay Day
+
+
+const unequalPayDay = new Date('2025-10-20T00:00:00'); // date du début du travail gratuit
+const counterElement = document.getElementById('counter');
+
 function updateCounter() {
   const today = new Date();
-  const currentYear = today.getFullYear();
-  const unequalPayDay = new Date(currentYear, 9, 20, 9, 0, 0); // 20 octobre à 9h
+  let diff = today - unequalPayDay; // différence en ms
 
-  const counterElement = document.getElementById('pay-gap-counter');
-  
-  let diffTime = Math.abs(today - unequalPayDay);
-  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-  const diffHours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const diffMinutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
+  // Calcul du nombre de jours, heures et minutes
+  const diffDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const diffHours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const diffMinutes = Math.floor((diff / (1000 * 60)) % 60);
 
-  if (today >= unequalPayDay) {
-    counterElement.innerHTML = `Depuis <strong>${diffDays} jours</strong>, <strong>${diffHours} heures</strong> et <strong>${diffMinutes} minutes</strong>, vous travaillez peut-être gratuitement.`;
-  } else {
-    counterElement.innerHTML = `Dans <strong>${diffDays} jours</strong>, <strong>${diffHours} heures</strong> et <strong>${diffMinutes} minutes</strong>, vous travaillerez peut-être gratuitement.`;
-  }
+  // Affiche message "Depuis ... les femmes travaillent gratuitement"
+  counterElement.innerHTML = `Depuis <strong>${diffDays} jours</strong>, <strong>${diffHours} heures</strong> et <strong>${diffMinutes} minutes</strong>, les femmes travaillent gratuitement.`;
 }
 
-// Mise à jour en temps réel chaque minute
+// Mise à jour chaque minute
+setInterval(updateCounter, 1000 * 60);
 updateCounter();
-setInterval(updateCounter, 60 * 1000);

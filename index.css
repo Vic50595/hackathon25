@@ -6,10 +6,9 @@ body {
   font-family: 'Funnel Display', sans-serif;
 }
 
-/* h1 {
-    color: #0C2317;
-    font-size: 50rem;
-} */
+h1 {
+    color: var(--dark-green)
+}
 
 section {
   width: 100%;
@@ -86,9 +85,9 @@ section {
 }
 
 .counter-section h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
-   color: var(--dark-green);
+   color: var(--brown);
 }
 
 
@@ -243,3 +242,5 @@ button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(219, 82, 96, 0.3);
 }
+
+
