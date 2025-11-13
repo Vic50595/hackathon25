@@ -112,7 +112,8 @@ button {
   gap: 0.75rem;
   border-radius: 1.25rem;
   color: white;
-  background: black;
+  background-color: var(--dark-green);
+  
 }
 
 /* ** ----------- Bacgkground Gradient v1 ------------ */
