@@ -199,18 +199,33 @@ gap: 72px;
 
     .box3 {
     display: flex;
-    width: 300px;
+    width: 315px;
     height: 436px;
-    padding: 36px 20px;
+    
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; 
     gap: 28px;
-    border-radius: 20px;
+    
     border: 1px solid rgba(250, 172, 107, 0.9);
+
+
+
+      background: rgba(250, 171, 107, 0.068);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+ 
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  padding: 40px 40px 50px;
+  
+  margin: 0 auto;
   }
 
 
+ul li {
+  margin-bottom: 15px;
+}
 
 .section5 > div {
 
@@ -392,10 +407,7 @@ gap: 32px; }
     gap: 1rem;
   }
 
-  .text-side h1 {
 
-      /* color: #000000; */
-  }
 
   .text-side p {}
 
