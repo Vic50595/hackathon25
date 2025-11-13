@@ -1,27 +1,76 @@
 
+  /* ** ----------- TEST 1 gradient ------------ */
+ 
+  /* === Fond principal du site === */
 body {
-    /* halo lumineux blanc dans les coins */
+  /* Dégradé radial partant du coin supérieur gauche :
+     - du blanc pur (#ffffff) au centre
+     - vers un orange doux (#FAAC6B)
+     - puis vers un rouge rosé (#DB5260)
+     Ce gradient crée une belle profondeur lumineuse. */
   background: radial-gradient(circle at top left, #ffffff 0%, #FAAC6B 35%, #DB5260 100%);
+
+  /* Fixe le fond pour qu’il ne bouge pas au scroll :
+     effet “parallaxe” subtil, très esthétique sur un fond coloré. */
   background-attachment: fixed;
+
+  /* Fait en sorte que le fond occupe toute la hauteur de la fenêtre,
+     même s’il n’y a pas beaucoup de contenu. */
   min-height: 100vh;
+
+  /* Supprime les marges par défaut du navigateur autour du body. */
   margin: 0;
-  /* Légère texture lumineuse en overlay */
+
+
+  /* Nécessaire pour que le pseudo-élément ::before puisse se positionner
+     par rapport au body. */
   position: relative;
 }
 
+
+/* === Couche de texture lumineuse en surimpression === */
 body::before {
+  /* Crée un pseudo-élément vide qui sert d’overlay. */
   content: "";
+
+  /* Le positionne en absolu pour couvrir toute la surface du body. */
   position: absolute;
-  inset: 0;
+  inset: 0; /* équivaut à top:0; right:0; bottom:0; left:0; */
+
+  /* Superposition de trois calques de textures : */
   background-image:
+    /* 1️⃣ Premier halo lumineux : cercle blanc semi-transparent
+       placé vers le coin supérieur gauche. */
     radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.5) 0%, transparent 70%),
+
+    /* 2️⃣ Deuxième halo plus léger : cercle blanc translucide
+       vers le coin inférieur droit. */
     radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.2) 0%, transparent 60%),
-    /* ajoute une très fine texture diagonale */
-    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 2px, transparent 2px, transparent 4px);
-  pointer-events: none;
-  /* mélange les couches . */
-  mix-blend-mode: soft-light;
+
+    /* 3️⃣ Texture fine en diagonale : un léger motif répété
+       avec des bandes blanches transparentes pour un effet “grain”. */
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 2px,
+      transparent 2px,
+      transparent 4px
+    );
 }
+
+/* Animation subtiles background */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  background-size: 200% 200%;
+  animation: gradientShift 30s ease-in-out infinite;
+}
+
+
 h2, h3, p { /* ! A retirer d'ici et mettre dans global  */
   margin-bottom: 16px;
 }
