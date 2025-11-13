@@ -113,7 +113,7 @@ button {
   border-radius: 1.25rem;
   color: white;
   background-color: var(--dark-green);
-  
+
 }
 
 /* ** ----------- Bacgkground Gradient v1 ------------ */
@@ -149,7 +149,7 @@ body {
 body::before {
   /* Crée un pseudo-élément vide qui sert d’overlay. */
   content: "";
-   z-index: -1;
+  z-index: -1;
 
   /* Le positionne en absolu pour couvrir toute la surface du body. */
   position: absolute;
@@ -193,4 +193,72 @@ body::before {
 body {
   background-size: 200% 200%;
   animation: gradientShift 30s ease-in-out infinite;
+}
+
+/* ** -----------Footer ------------------ ** */
+
+.footer {
+  background-color: var(--dark-green);
+  color: #ffffff;
+  padding: 2rem 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-logo {
+  f font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  font-weight: 300;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
 }
