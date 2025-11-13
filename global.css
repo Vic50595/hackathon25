@@ -1,109 +1,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Funnel Display", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Funnel Display", sans-serif;
 }
 
 :root {
-    --orange: #FAAC6B; 
-    --brown: #735053; 
-    --gray-light: #CCCCCC; 
-    --dark-green: #0C2317; 
-    --dark-orange: #DB5260; 
-    --dark-violet: #AA70B9; 
-    --light-violet: #BD9BC6; 
-    --dark-gray: #8A879C; 
-  }
+  --orange: #FAAC6B;
+  --brown: #735053;
+  --gray-light: #CCCCCC;
+  --dark-green: #0C2317;
+  --dark-orange: #DB5260;
+  --dark-violet: #AA70B9;
+  --light-violet: #BD9BC6;
+  --dark-gray: #8A879C;
+}
 
-  h1 {
-    font-size: 52px;
-    font-weight: 600; /* semibold */
-  }
-  
-  h2 {
-    font-size: 24px;
-    font-weight: 600; /* semibold */
-  }
-  
-  h3 {
-    font-size: 24px;
-    font-weight: 400; /* regular */
-  }
-  
-  h4 {
-    font-size: 20px;
-    font-weight: 400; /* regular */
-  }
-  
-  a, li {
-    font-size: 16px;
-    font-weight: 600; /* semibold */
-  }
+h1 {
+  font-size: 52px;
+  font-weight: 600;
+  /* semibold */
+}
 
-  p {
-    font-size: 16px;
-    font-weight: 400; /* regular */
-  }
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  /* semibold */
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+  /* regular */
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  /* regular */
+}
+
+a,
+li {
+  font-size: 16px;
+  font-weight: 600;
+  /* semibold */
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  /* regular */
+}
 
 
-  section {
-    padding: 50px;
-  }
+section {
+  padding: 50px;
+}
 
 /*NAV BAR*/
-  .logo {
- color: var(--dark-orange);
-  }
+.logo {
+  color: var(--dark-orange);
+}
 
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 32px 12px;
-  }
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 12px;
+}
 
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 
 
-  .nav-right {
-    display: flex;
-    flex-direction: row;
-    gap: 72px; 
-    align-items: center;
-  }
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  gap: 72px;
+  align-items: center;
+}
 
-  .nav-left {
-    display: flex;
-    flex-direction: row;
-    gap: 8px; 
-    align-items: center;
-    color: var(--dark-green);
-  }
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  color: var(--dark-green);
+}
 
-  nav svg {
-    height: 60px;
-    width: 60px;
-  }
+nav svg {
+  height: 60px;
+  width: 60px;
+}
 
-  button {
-    display: flex;
-padding: 0.5rem 3.75rem;
-justify-content: center;
-align-items: center;
-gap: 0.75rem;
-border-radius: 1.25rem;
-color: white;
-background: black;
-  }
- 
-  /* ** ----------- Bacgkground Gradient v1 ------------ */
- 
-  /* === Fond principal du site === */
+button {
+  display: flex;
+  padding: 0.5rem 3.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 1.25rem;
+  color: white;
+  background: black;
+}
+
+/* ** ----------- Bacgkground Gradient v1 ------------ */
+
+/* === Fond principal du site === */
 body {
   /* Dégradé radial partant du coin supérieur gauche :
      - du blanc pur (#ffffff) au centre
@@ -134,10 +142,12 @@ body {
 body::before {
   /* Crée un pseudo-élément vide qui sert d’overlay. */
   content: "";
+   z-index: -1;
 
   /* Le positionne en absolu pour couvrir toute la surface du body. */
   position: absolute;
-  inset: 0; /* équivaut à top:0; right:0; bottom:0; left:0; */
+  inset: 0;
+  /* équivaut à top:0; right:0; bottom:0; left:0; */
 
   /* Superposition de trois calques de textures : */
   background-image:
@@ -151,24 +161,29 @@ body::before {
 
     /* 3️⃣ Texture fine en diagonale : un léger motif répété
        avec des bandes blanches transparentes pour un effet “grain”. */
-    repeating-linear-gradient(
-      45deg,
+    repeating-linear-gradient(45deg,
       rgba(255, 255, 255, 0.03) 0,
       rgba(255, 255, 255, 0.03) 2px,
       transparent 2px,
-      transparent 4px
-    );
+      transparent 4px);
 }
 
 /* Animation subtiles background */
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 body {
   background-size: 200% 200%;
   animation: gradientShift 30s ease-in-out infinite;
 }
-

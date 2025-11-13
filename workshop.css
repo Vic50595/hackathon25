@@ -7,6 +7,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Funnel Display', Arial, sans-serif;
+       color: var(--dark-green);
   }
 
   html,body {
@@ -19,6 +20,7 @@
   /* effet scroll */
   body {
       scroll-snap-type: y mandatory;
+     
   }
 
   section {
@@ -392,7 +394,7 @@ gap: 32px; }
 
   .text-side h1 {
 
-      color: #000000;
+      /* color: #000000; */
   }
 
   .text-side p {}
