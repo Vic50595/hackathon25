@@ -87,7 +87,6 @@
 
   /* acceuil negoci */
   .section1 {
-      
       display: flex;
       align-items: center;
       justify-content: center;
@@ -97,37 +96,36 @@
 
   /* etape 1 */
   .section2 {
-      background: #9daab3;
-              
-          display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 80px;
-
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* important! */
+  background: #9daab3;
+  padding: 4em;
+  gap: 10px;
   }
 
-    .section2 > div {
 
-display: flex;
-justify-content: center;
-align-items: flex-start;
-gap: 32px; }
 
 .full-width-center {
-  width: 100%;              /* takes all available horizontal space */
-  min-height: 200px;        /* or any height you want */
-  
-  display: flex;            /* use flexbox for centering */
-  align-items: space-between;      /* vertical centering */
-  justify-content: space-between;  /* horizontal centering (optional) */
-
- 
-  box-sizing: border-box;   /* ensures padding doesn’t break layout */
-  padding: 20px;
-gap: 40px; 
+  width: 100%;
+  display: flex;
+  flex-direction: row;       /* keep side by side */
+  align-items: center;   /* ✅ fixes vertical alignment */
+  justify-content: space-between;
+  box-sizing: border-box;
+  gap: 30px;
 }
 
+.section2-footer {
+  padding-bottom: 4em;   /* extra space below */
+  font-size: 0.8em;      /* make it discreet */
+
+  text-align: center;    /* center it horizontally */
+  background: transparent; /* or match section bg */
+   outline: 2px solid red; /* debug visibility */
+  background-color: yellow; /* debug background */
+}
   /* etape 2 */
   .section3 {
       background: #726577;
@@ -138,12 +136,25 @@ align-items: flex-start;
 gap: 72px;
   }
 
-  .section3 > div {
+.section3 .full-width-center {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;          /* spacing between elements */
+  box-sizing: border-box;
+}
+  .section3 .full-width-center > .side {
+  flex: 0 0 20%;       /* each element takes 25% of width */
+  box-sizing: border-box;
+}
 
-display: flex;
-justify-content: center;
-align-items: flex-start;
-gap: 32px; }
+.section3 .side img {
+  width: 100%;         /* image fills its container */
+  max-width: 100%;     /* prevents stretching beyond container */
+  height: auto;        /* maintain aspect ratio */
+  display: block;      /* removes inline spacing */
+  object-fit: cover;   /* optional: ensures image fills box proportionally */
+}
+
   /* timing parfait */
   .section6 {
       background: #92a399;
@@ -156,18 +167,18 @@ align-items: flex-start;
 
   /* etape 3 */
   .section4 {
-      background: #99918a;
+      
            background: #92a399;
       flex-direction: column;
-gap: 50px;
+gap: 15px;
     display: flex;
 align-items: flex-start;
   }
 
   .calc div {
 display: flex;
-width: 400px;
-height: 650px;
+width: 300px;
+height: 580px;
 padding: 20px;
 flex-direction: column;
 align-items: center;
@@ -227,17 +238,19 @@ ul li {
   margin-bottom: 15px;
 }
 
-.section5 > div {
+.section5 .full-width-center {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;                  /* space between elements */
+  width: 100%;
+  box-sizing: border-box;
+}
 
-display: flex;
-justify-content: center;
-align-items: flex-start;
-gap: 32px; }
   /* timing parfait */
   .section6 {
       background: #92a399;
       flex-direction: column;
-gap: 50px;
+gap: 20px;
     display: flex;
 align-items: flex-start;
 
@@ -246,19 +259,19 @@ align-items: flex-start;
   .section6-intro {
 display: flex;
     flex-direction: column;
-    gap: 60px;
-    padding-top: 70px;
+    gap: 20px;
+    padding-top: 20px;
 }
 
 .timeline div {
 display: flex;
 width: 240px;
-height: 360px;
-padding: 20px;
+height: 300px;
+padding: 15px;
 flex-direction: column;
 align-items: center;
 
-gap: 40px;
+gap: 20px;
 border-radius: 32px;
 background: rgba(204, 204, 204, 0.40);
 
@@ -279,7 +292,7 @@ flex-wrap: wrap;
     width: 760px;
     height: 254px;
    
-padding: 20px 40px;
+padding: 20px 20px;
 flex-direction: column;
 align-items: center;
 gap: 26px;
@@ -306,7 +319,7 @@ width: 500px;
 padding: 20px;
 flex-direction: column;
 align-items: flex-start;
-gap: 24px;
+gap: 10px;
 border-radius: 32px;
 background: rgba(219, 82, 96, 0.10);
 
@@ -314,7 +327,7 @@ background: rgba(219, 82, 96, 0.10);
 
 .section6-low {
     display: flex;
-padding: 0 40px;
+padding: 0 30px;
 align-items: center;
 justify-items: center;
 gap: 20px;
@@ -401,6 +414,8 @@ gap: 32px; }
 
 
   .text-side {
+    display: flex;
+    flex-direction: column;
       flex: 1;
       color: white;
     overflow: hidden; 
@@ -409,11 +424,10 @@ gap: 32px; }
 
 
 
-  .text-side p {}
-
+ 
 
   .image-side {
-      flex: 1;
+      
       display: flex;
       justify-content: center;
       gap: 100px;
