@@ -209,7 +209,7 @@ section {
 }
 
 .cardMenu h4 {
-  color: white; /* Texte blanc*/
+
 margin-bottom: 10px; /* Ajuste un petit espace uniquement en dessous du titre */
 }.cardMenu h4, .cardMenu img {
   margin: 0; /* Supprime les marges par défaut */
@@ -221,6 +221,10 @@ margin-bottom: 10px; /* Ajuste un petit espace uniquement en dessous du titre */
   box-shadow: 0 12px 25px rgba(0,0,0,0.3); /* Ombre plus marquée */
   opacity: 0.9; /* Rend la carte un peu moins transparente */
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.cardMenu a {
+    color: white; /* Texte blanc*/
 }
 
 /* Button styling */

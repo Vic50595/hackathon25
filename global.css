@@ -43,10 +43,21 @@ h4 {
 }
 
 a {
-  font-size: 16px;
-  font-weight: 600;
-  /* semibold */
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none; /* enlever le souligné */
+  color: var(--dark-green);
 }
+
+
+a:hover {
+    text-decoration: underline;
+    color: var(--dark-orange);
+}
+
+/* a:visited {
+color: var(--dark-gray);
+} */
 
 li {
   font-size: 16px;
