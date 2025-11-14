@@ -41,7 +41,7 @@
   .page-section {
       height: 100vh;
       /* full viewport */
-      padding: top 64px; 
+      padding: top 40px; 
       /* space for navbar */
       box-sizing: border-box;
       /* include padding in height */
@@ -68,7 +68,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start; /* important! */
-  background: #9daab3;
+  background: #aabfcc;
   padding: 4em;
   gap: 10px;
   }
@@ -95,7 +95,7 @@
 }
   /* etape 2 */
   .section3 {
-      background: #726577;
+      background: #b4a9b9;
            
           display: flex;
 flex-direction: column;
@@ -122,20 +122,11 @@ gap: 72px;
   object-fit: cover;   /* optional: ensures image fills box proportionally */
 }
 
-  /* timing parfait */
-  .section6 {
-      background: #92a399;
-      flex-direction: column;
-gap: 50px;
-    display: flex;
-align-items: flex-start;
-
-  }
 
   /* etape 3 */
   .section4 {
       
-           background: #92a399;
+           background: #afbdb5;
       flex-direction: column;
 gap: 15px;
     display: flex;
@@ -152,7 +143,7 @@ align-items: center;
 
 gap: 30px;
 border-radius: 32px;
-background: rgba(204, 204, 204, 0.40);
+background: rgba(204, 204, 204, 0.4);
 
 }
 
@@ -166,13 +157,18 @@ align-self: stretch;
 flex-wrap: wrap;
 }
 
+.calc div:nth-of-type(4) {
+    background:rgba(250, 171, 107, 0.37);
+}
+
   /* etape 4 */
   .section5 {
-      background: #887b7a;
+      background: #c9adad;
           display: flex;
 flex-direction: column;
 align-items: flex-start;
 gap: 72px;
+ 
   }
 
     .box3 {
@@ -185,7 +181,7 @@ gap: 72px;
     justify-content: flex-start; 
     gap: 28px;
     
-    border: 1px solid rgba(250, 172, 107, 0.9);
+    border: 2px solid rgba(250, 172, 107, 0.9);
 
 
 
@@ -215,7 +211,7 @@ ul li {
 
   /* timing parfait */
   .section6 {
-      background: #92a399;
+       background: #afbdb5;
       flex-direction: column;
 gap: 20px;
     display: flex;
@@ -264,7 +260,7 @@ flex-direction: column;
 align-items: center;
 gap: 26px;
 border-radius: 20px;
-border: 1px solid #159FB8;
+border: 1px solid rgba(250, 172, 107, 0.9);
 }
 
 .email-icon-text {
@@ -288,7 +284,7 @@ flex-direction: column;
 align-items: flex-start;
 gap: 10px;
 border-radius: 32px;
-background: rgba(219, 82, 96, 0.10);
+background: rgba(250, 171, 107, 0.37);
 
 }
 
@@ -316,7 +312,7 @@ flex-wrap: wrap;
 
   /* jour j */
   .section7 {
-      background: #70757a;
+      background:rgb(147, 140, 158);
        display: flex;
     flex-direction: column;
     gap: 72px;
