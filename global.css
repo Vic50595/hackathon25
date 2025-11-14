@@ -110,11 +110,13 @@ button {
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
-  border-radius: 1.25rem;
+  border-radius: 8px;   /* test uniformisation ajout Louise  */
   color: white;
   background-color: var(--dark-green);
-
+   cursor: pointer; /* test uniformisation ajout Louise  */
+  transition: all 0.25s ease; /* test uniformisation ajout Louise  */
 }
+
 
 /* ** ----------- Bacgkground Gradient v1 ------------ */
 
