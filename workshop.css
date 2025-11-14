@@ -123,8 +123,7 @@
 
   text-align: center;    /* center it horizontally */
   background: transparent; /* or match section bg */
-   outline: 2px solid red; /* debug visibility */
-  background-color: yellow; /* debug background */
+  
 }
   /* etape 2 */
   .section3 {
